@@ -1,0 +1,9 @@
+version: '3'
+services:
+  python:
+    container_name: monitor_danke_spider
+    build: .
+    restart: always
+    volumes:
+      - .:/app
+    command: nohup python main.py &>> ./danke_spider.log
